@@ -194,3 +194,29 @@ function xify(str) {
    }
 
    console.log(titleCase('How will this look?'));
+
+   //camelCase 
+
+   console.log('camelCase *********************************************')
+
+   function camelCase(str) {
+       let output = '';
+       let shouldCap = false;
+       for (char of str) {
+           if (char !== ' ') {
+           if (shouldCap) {
+               output += char.toUpperCase();
+            } else {
+                output += char.toLowerCase();
+            }
+           }
+           if (char === ' ') {
+               shouldCap = true;
+           } else {
+               shouldCap = false;
+           }
+        }
+        return output;
+   }
+
+   console.log(camelCase('Hey there'));
