@@ -220,3 +220,25 @@ function xify(str) {
    }
 
    console.log(camelCase('Hey there'));
+
+   //crazyCase2ReturnOfTheCrazyCase 
+
+   console.log('crazyCase2ReturnOfTheCrazyCase ***********************************');
+
+   function crazyCase2ReturnOfTheCrazyCase(str) {
+       let output = '';
+       let shouldCap = false;
+       for (char of str) {
+           if (shouldCap) {
+               output += char.toUpperCase();
+           } else {
+               output += char.toLowerCase();
+           }
+           if (char !== ' ') {
+               shouldCap = !shouldCap;
+           }
+       }
+       return output;
+   }
+
+   console.log(crazyCase2ReturnOfTheCrazyCase('Lets see how this one turns out'));
